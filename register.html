@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form </title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h3> Registration Form</h3>
+    <div class = "main-body">
+      <div class = "main-body2">
+        <form onsubmit="return validate()" action="message.html" >
+          <div class = "name">
+            <h5> NAME : <h5>
+            <input id = "uname"  type="text">
+          </div><br><br>
+          <div class = "address">
+            <h5> ADDRESS : <h5>
+            <textarea id = "uaddress"  type="text"></textarea>
+          </div><br><br>
+          <div class = "country">
+            <h5> COUNTRY : <h5>
+            <input id = "ucountry"  type="text">
+          </div><br><br>
+          <div class = "state">
+            <h5> STATE : <h5>
+            <input id = "ustate" type="text">
+          </div><br><br>
+          <div class = "district">
+            <h5> DISTRICT : <h5>
+            <input id = "udistrict"  type="text">
+          </div><br><br>
+          <div class = "age">
+            <h5> AGE : <h5>
+            <input id = "uage"  type="text">
+          </div><br><br>
+          <div class = "email">
+            <h5> EMAIL : <h5>
+            <input id = "uemail"  type="text">
+          </div><br><br>
+          <div class = "number">
+            <h5> CONTACT NUMBER : <h5>
+            <input id = "unumber"  type="text">
+          </div><br><br>
+          <div class = "password">
+            <h5> PASSWORD : <h5>
+            <input id = "upassword"  type="text">
+          </div><br><br>
+          <div class = "confirm">
+            <h5> CONFIRM PASSWORD : <h5>
+            <input id = "uconfirm"  type="text">
+          </div><br><br>
+          <button type="submit">Submit</button>
+        </form>
+        <script>
+  function validate() {
+    var uname = document.getElementById("uname").value;
+    var uaddress = document.getElementById("uaddress").value;
+    var ucountry = document.getElementById("ucountry").value;
+    var ustate = document.getElementById("ustate").value;
+    var udistrict = document.getElementById("udistrict").value;
+    var uage = document.getElementById("uage").value;
+    var uemail = document.getElementById("uemail").value;
+    var unumber = document.getElementById("unumber").value;
+    var upassword = document.getElementById("upassword").value;
+    var uconfirm = document.getElementById("uconfirm").value;
+
+    if (
+      uname === "" ||
+      uaddress === "" ||
+      ucountry === "" ||
+      ustate === "" ||
+      udistrict === "" ||
+      uage === "" ||
+      uemail === "" ||
+      unumber === "" ||
+      upassword === "" ||
+      uconfirm === ""
+    ) {
+      alert("Please fill in all the fields.");
+      return false;
+    }
+
+    var nameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    if (!nameRegex.test(uname)) {
+      alert("Invalid name");
+      return false;
+    }
+    if (isNaN(uage)||uage<1||uage>100) { 
+      alert("The age must be a number between 1 and 100");
+      return false;
+    }
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(uemail)) {
+        alert("Invalid email. Please provide a valid email address.");
+        return false;
+      }
+      var numRegex = /^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/;
+      if (!numRegex.test(unumber)) {
+        alert("invalid number");
+        return false;
+      }
+      var passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+      if (!passRegex.test(upassword)) {
+        alert("Password must contain at least one number, one uppercase letter, one lowercase letter, and be at least 8 characters long.");
+        return false;
+      }
+      if (upassword !== uconfirm) {
+        alert("Password and confirm password do not match.");
+        return false;
+      }
+     return true;
+    }
+   </script>
+ </div>
+</div>

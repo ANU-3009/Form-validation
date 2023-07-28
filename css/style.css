@@ -1,0 +1,106 @@
+* {
+ margin:0;
+ padding:0;
+}
+body {
+  background-color:#D0D3D4;
+}
+h3 {
+   font-family:Arial, Helvetica, sans-serif;
+  font-size:45px;
+  text-align:center;
+  padding-top:40px;
+  color:#3498DB;
+  text-decoration:underline #3498DB;
+}
+.main-body {
+  margin-top:60px;
+  align-items:center;
+  margin-left:540px;
+}
+.main-body h5 {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:15px;
+  color:#EC7063;
+}
+.name {
+  display:flex;
+}
+.address {
+  display:flex;
+}
+.country {
+  display:flex;
+}
+.state {
+  display:flex;
+}
+.district {
+  display:flex;
+}
+.gender {
+  display:flex;
+}
+.age {
+  display:flex;
+}
+.email {
+  display:flex;
+}
+.number {
+  display:flex;
+}
+.password {
+  display:flex;
+}
+.confirm {
+  display:flex;
+}
+input {
+  width:100%;
+  height:100%;
+}
+#uname {
+margin-left:130px;
+}
+#uaddress {
+margin-left:100px;
+width:115%;
+}
+#ucountry {
+margin-left:100px;
+width:110%;
+}
+#ustate {
+margin-left:130px;
+}
+#udistrict {
+margin-left:110px;
+width:105%;
+}
+#uage {
+margin-left:150px;
+width:90%;
+}
+#uemail {
+margin-left:130px;
+width:100%;
+}
+#unumber {
+margin-left:40px;
+width:140%;
+}
+#upassword {
+margin-left:90px;
+width:115%;
+}
+#uconfirm {
+margin-left:10px;
+width:170%;
+}
+button {
+ padding:6px 10px;
+ margin-left:180px;
+ background-color:#7DCEA0;
+ cursor:pointer;
+}
